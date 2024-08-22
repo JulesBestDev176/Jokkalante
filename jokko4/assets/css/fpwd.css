@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&family=Roboto:wght@300;500;700&display=swap');
+:root{
+    --bg-body:#f0f2f5;
+    --color-white: hsl(252, 30%, 100%);
+    --color-light: hsl(252, 30%, 95%);
+    --color-gray: hsl(252, 15%, 65%);
+    --color-primary: hsl(252, 75%, 60%);
+    --color-secondary: hsl(252, 100%, 90%);
+    --color-success: hsl(120, 95%, 65%);
+    --color-danger: hsl(0, 95%, 65%);
+    --color-dark: hsl(252, 30%, 17%);
+    --color-black: hsl(252, 30%, 10%);
+   
+    --border-radius:2rem ;
+    --card-border-radius:1rem;
+    --btn-padding:0.6rem 2rem;
+    --search-padding:0.6rem 1rem;
+    --card-padding:1rem;
+
+    --sticky-top-left: 5.4rem;
+    --sticky-top-right: -18rem;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: var(--bg-body);
+    position: relative;
+}
+.a,.b{
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+}
+
+.a:last-child{
+    color: #000;
+}
+.container{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+.container .title h1{
+    font-size: 44px;
+    margin-left: -30px;
+    color: var(--color-primary);
+}
+.formulaire{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    padding: 20px;
+    width: 350px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+}
+.btn{
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    margin-bottom: 15px;
+
+
+}
+
+.form-control {
+    position: relative;
+    flex-direction: column;
+    margin: 15px 0 20px;
+    width: 300px;
+}
+ 
+.form-control input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px var(--color-primary) solid;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color: #000;
+}
+  
+.form-control input:focus,
+.form-control input:valid {
+    outline: 0;
+    border-bottom-color: var(--color-primary);
+}
+  
+.form-control label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    color: var(--color-primary);
+}
+  
+.form-control label span {
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+  
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+    color: var(--color-primary);
+    transform: translateY(-30px);
+}
+  
+.btn-submit {
+    background-color: var(--color-primary);
+    color: #fff;
+}
+.btn-danger{
+    background: var(--color-danger);
+    color: #fff;
+}

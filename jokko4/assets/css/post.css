@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&family=Roboto:wght@300;500;700&display=swap');
+
+:root {
+    --bg-body: #f0f2f5;
+    --color-white: hsl(252, 30%, 100%);
+    --color-light: hsl(252, 30%, 95%);
+    --color-gray: hsl(252, 15%, 65%);
+    --color-primary: hsl(252, 75%, 60%);
+    --color-secondary: hsl(252, 100%, 90%);
+    --color-success: hsl(120, 95%, 65%);
+    --color-danger: hsl(0, 95%, 65%);
+    --color-dark: hsl(252, 30%, 17%);
+    --color-black: hsl(252, 30%, 10%);
+
+    --border-radius: 2rem;
+    --card-border-radius: 1rem;
+    --btn-padding: 0.6rem 2rem;
+    --search-padding: 0.6rem 1rem;
+    --card-padding: 1rem;
+
+    --sticky-top-left: 5.4rem;
+    --sticky-top-right: -18rem;
+
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+.section {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    background-color: #0000001f;
+    z-index: 1000;
+    
+
+}
+
+.section.active {
+    display: flex;
+}
+
+.form {
+    background-color: #f6f8f8;
+    padding: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    width: 900px;
+    height: 500px;
+}
+
+.form .top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.back_btn {
+    color: var(--color-primary);
+    text-decoration: 0;
+    display: flex;
+    align-items: center;
+
+}
+
+.form .post{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.form .post .left{
+    height: 430px;
+    
+}
+.form .post .left img{
+    width: 100%;
+    height: 100%;
+}
+
+.profile-photo{
+    width:  2.7rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+
+}
+.gauche .profile-photo{
+    margin-right: 20px;
+}
+.hr{
+    /* margin-top: 10px; */
+    border: 1px solid var(--color-gray);
+}
+.comments{
+    max-height: 300px; /* Ajustez la hauteur maximale selon vos besoins */
+    overflow-y: auto;
+    
+}
+.comments .comment{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 10px 0;
+}
+.duree{
+    margin-left: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+.comments .comment .profile-photo{
+    margin-right: 10px;
+}
+
+.gauche{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.gauche .postText{
+    margin-bottom: -10px;
+    display: flex;
+    align-items: center;
+}
+.btn{
+    display: inline-block;
+    padding: var(--btn-padding);
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 300ms ease;
+    font-size: 0.9rem;
+    border: none;
+}
+
+.btn:hover{
+    opacity: 0.8;
+}
+
+.btn-primary{
+    background: var(--color-primary);
+    color: white;
+}
+.create-post{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    background: var(--color-white);
+    padding: 0.4rem var(--card-padding);
+    border-radius: var(--border-radius);
+
+}
+.create-post input[type="text"] {
+    justify-self: start;
+    width: 100%;
+    padding-left: 1rem;
+    background: transparent;
+    color: var(--color-dark);
+    margin-right: 1rem;
+    border: none;
+    outline: none;
+}
